@@ -1,13 +1,54 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lista della spesa</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <ul class="item-list">
+          <div class="filter">
+            <select>
+                <option value="tutti">Tutti</option>
+                <option value="Acquistati">Acquistati</option>
+                <option value="Da_acquistare">Da acquistare</option>
+                <!-- Aggiungi altre opzioni se necessario -->
+            </select>
+          </div>
+            <li class="item">
+                <input type="checkbox">
+                <span class="name">Banana</span>
+                <button>&times;</button>
+            </li>
+            <li class="item">
+                <input type="checkbox">
+                <span class="name">Farina</span>
+                <button>&times;</button>
+            </li>
+            <li class="item">
+                <input type="checkbox">
+                <span class="name">Mela</span>
+                <button>&times;</button>
+            </li>
+            <li class="item">
+                <input type="checkbox">
+                <span class="name">Wurstel</span>
+                <button>&times;</button>
+            </li>
+            <li class="item">
+                <input type="checkbox">
+                <span class="name">Wurstel</span>
+                <button>&times;</button>
+            </li>
+            <li class="item">
+                <input type="checkbox">
+                <span class="name">Wurstel</span>
+                <button>&times;</button>
+            </li>
+            <!-- Aggiungi altri articoli se necessario -->
+        </ul>
+    </div>
+</body>
 </html>
