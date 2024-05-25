@@ -1,0 +1,15 @@
+head{
+    style
+        div {
+	    background-color:blueviolet;
+        color: white;
+        border: 10px solid currentcolor;
+        padding: 15px;  
+    }
+}
+body{
+    table {
+        width: 100%;
+        border: 1px solid;
+    }
+}
