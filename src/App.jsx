@@ -53,15 +53,7 @@ function ItemList()
 
   return (
     <div className="item-list">
-      <header className="header">Shopping List</header>
-      <div className="input-item">
-        <input
-          type="text"
-          value={newItem}
-          onChange={(e) => setNewItem(e.target.value)}
-        />
-        <button onClick={handleAdd}>OK</button>
-      </div>
+      <header className="header">Shopping List</header>      
       <div className="filter">
         <select value={filter} onChange={(e) => setFilter(e.target.value)}>
           <option value="Tutti">Tutti</option>
