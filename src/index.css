@@ -6,7 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
+  margin: 2%;
 }
 /* Stile per il filtro a discesa */
 .filter {
