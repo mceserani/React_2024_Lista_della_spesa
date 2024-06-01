@@ -9,18 +9,9 @@ body {
   margin: 0;
 }
 
-/* Contenitore principale della lista della spesa */
-.container {
-  width: 300px;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
 /* Stile per il filtro a discesa */
 .filter {
+  margin-top: 5%;
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -38,7 +29,8 @@ body {
 .item-list {
   list-style: none;
   padding: 0;
-  margin: 0; 
+  margin-top: 10px;
+  border: 1px solid black; 
 }
 
 .item {
