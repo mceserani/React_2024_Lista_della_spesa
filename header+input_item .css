@@ -1,15 +1,225 @@
-head{
-    style
-        div {
-	    background-color:blueviolet;
-        color: white;
-        border: 10px solid currentcolor;
-        padding: 15px;  
-    }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
-body{
-    table {
-        width: 100%;
-        border: 1px solid;
-    }
+
+.app {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+}
+
+
+.header {
+    background-color: #6A1B9A;
+    color: white;            
+    text-align: center;      
+    padding: 15px 0;          
+    font-size: 24px;        
+    font-weight: bold;        
+    border-radius: 8px 8px 0 0;
+}
+
+
+.input-item {
+    display: flex;            
+    justify-content: space-between;
+    padding: 10px 0;              
+    margin: 20px 0;              
+}
+
+.input-item input[type="text"] {
+    flex-grow: 1;                
+    padding: 10px;              
+    font-size: 16px;          
+    border: 1px solid #ccc;      
+    border-radius: 4px;          
+    margin-right: 10px;          
+}
+
+.input-item button {
+    background-color: #6A1B9A;    
+    color: white;                
+    border: none;                
+    padding: 10px 15px;          
+    font-size: 16px;            
+    border-radius: 4px;          
+    cursor: pointer;              
+}
+
+.input-item button:hover {
+    background-color: #5A0E8A;    
+}
+
+
+.item-list {
+    margin-top: 20px;
+}
+
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.item span {
+    flex-grow: 1;
+}
+
+.item button {
+    background-color: #d9534f;    
+    color: white;                
+    border: none;                
+    padding: 5px 10px;          
+    font-size: 14px;            
+    border-radius: 4px;        
+    cursor: pointer;              
+
+.item button:hover {
+    background-color: #c9302c;  
+}
+
+
+.filter {
+    margin-bottom: 20px;
+}
+
+.filter select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+}
+
+
+.header {
+  background-color: #6A1B9A;
+  color: white;            
+  text-align: center;      
+  padding: 15px 0;        
+  font-size: 24px;        
+  font-weight: bold;      
+  border-radius: 8px 8px 0 0;
+}
+
+
+.input-item {
+  display: flex;              
+  justify-content: space-between;
+  padding: 10px 0;                
+  margin: 20px 0;              
+}
+
+.input-item input[type="text"] {
+  flex-grow: 1;                
+  padding: 10px;            
+  font-size: 16px;            
+  border: 1px solid #ccc;    
+  border-radius: 4px;          
+  margin-right: 10px;          
+}
+
+.input-item button {
+  background-color: #6A1B9A;    
+  color: white;                
+  border: none;                
+  padding: 10px 15px;          
+  font-size: 16px;            
+  border-radius: 4px;          
+  cursor: pointer;              
+}
+
+.input-item button:hover {
+  background-color: #5A0E8A;  
+}
+
+
+.item-list {
+  margin-top: 20px;
+}
+
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.item span {
+  flex-grow: 1;
+}
+
+.item button {
+  background-color: #d9534f;  
+  color: white;                
+  border: none;                
+  padding: 5px 10px;          
+  font-size: 14px;            
+  border-radius: 4px;          
+  cursor: pointer;              
+}
+
+.item button:hover {
+  background-color: #c9302c;    
+}
+
+
+.filter {
+  margin-bottom: 20px;
+}
+
+.filter select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 }
