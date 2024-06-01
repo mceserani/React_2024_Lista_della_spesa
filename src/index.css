@@ -8,19 +8,9 @@ body {
   height: 100vh;
   margin: 0;
 }
-
-/* Contenitore principale della lista della spesa */
-.container {
-  width: 300px;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
 /* Stile per il filtro a discesa */
 .filter {
+  margin-top: 5%;
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -30,7 +20,7 @@ body {
 .filter select {
   padding: 5px;
   font-size: 1em;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 3px;
 }
 
@@ -38,7 +28,8 @@ body {
 .item-list {
   list-style: none;
   padding: 0;
-  margin: 0; 
+  margin-top: 10px;
+  border: 1px solid black; 
 }
 
 .item {
@@ -66,3 +57,56 @@ body {
 .item button:hover {
   color: red;
 }
+
+header {
+  background-color: #6A1B9A;
+  color: white;            
+  text-align: center;      
+  padding: 15px 0;        
+  font-size: 24px;        
+  font-weight: bold;        
+  border-radius: 8px 8px 0 0;
+  border: 1px solid black;
+}
+header h1 {
+  padding:8px;
+}
+
+.input-item {
+  display: flex;            
+  justify-content: space-between;
+  padding: 10px ;              
+  margin: 20px 0; 
+  border: 1px solid black;             
+}
+
+.input-item [type="text"] {
+  flex-grow: 1;                
+  padding: 10px;              
+  font-size: 16px;          
+  border: 1px solid #ccc;      
+  border-radius: 4px;          
+  margin-right: 10px;          
+}
+
+.input-item button {
+  background-color: #6A1B9A;    
+  color: white;                
+  border: none;                
+  padding: 10px 15px;          
+  font-size: 16px;            
+  border-radius: 4px;          
+  cursor: pointer;              
+}
+
+.input-item button:hover {
+  background-color: #5A0E8A;    
+}
+
+.item span {
+  flex-grow: 1;
+}
+
+
+
+

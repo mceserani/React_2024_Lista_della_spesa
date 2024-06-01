@@ -109,7 +109,7 @@ function InputItem() {
   };
 
   return (
-    <div>
+    <div className='input-item'>
       <input type="text" value={inputValue} onChange={handleInputChange} />
       <button onClick={handleAddItem}>Add Item</button>
     </div>
