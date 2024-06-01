@@ -122,7 +122,6 @@ function InputItem({inputItemName, setInputItemName, prodotti, setProdotti}) {
   };
 
   const handleAddItem = () => {
-    console.log(typeof Object.getPrototypeOf() + '1');
     setProdotti([ ...prodotti , {"nome": inputItemName, "comprato": false} ]);
   }
 
