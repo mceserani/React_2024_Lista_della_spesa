@@ -4,9 +4,9 @@ import './App.css'
 function App() {
 
   const initial_item = [{
-                          nome: "Comprami",
-                          comprato: false
-                        }];
+    nome: "Benvenuto",
+    comprato: false
+  }];
 
   const [inputItemName, setInputItemName] = useState("");
 
@@ -32,7 +32,7 @@ function App() {
       />
     </>
   )
-  
+
 }
 
 function Header() {
@@ -43,11 +43,32 @@ function Header() {
   );
 }
 
-function ItemList({prodotti, setProdotti, productFilter, setProductFilter}) 
-{
+function InputItem({ inputItemName, setInputItemName, prodotti, setProdotti }) {
+
+  const handleInputChange = (event) => {
+    setInputItemName(event.target.value);
+  };
+
+  const handleAddItem = () => {
+    // impedisci l'aggiunta di item con lo stesso nome o vuoti
+    if (prodotti.map(({ nome }) => nome).includes(inputItemName) || inputItemName === "") {
+      return;
+    }
+    setProdotti([...prodotti, { "nome": inputItemName, "comprato": false }]);
+  }
+
+  return (
+    <div>
+      <input type="text" value={inputItemName} onChange={handleInputChange} />
+      <button onClick={handleAddItem}>Add Item</button>
+    </div>
+  );
+}
+
+function ItemList({ prodotti, setProdotti, productFilter, setProductFilter }) {
 
   const handleToggle = (name) => {
-    let products = prodotti
+    let products = [...prodotti];
     products.forEach(item => {
       if (item.nome === name) {
         item.comprato = !item.comprato;
@@ -58,27 +79,17 @@ function ItemList({prodotti, setProdotti, productFilter, setProductFilter})
   };
 
   const handleDelete = (name) => {
-    setProdotti([ ...prodotti.filter(item => item.nome !== name)]);
+    setProdotti([...prodotti.filter(item => item.nome !== name)]);
   };
-
-  console.log(prodotti);
 
   const filteredItems = prodotti.filter(item => {
     if (productFilter === 'all') return true;
-    else if (productFilter === "toBuy") {
-      if (item.comprato === false) return true;
-      return false;
-    }
-    else if (productFilter === "alreadyBought") {
-      if (item.comprato === true) return true;
-      return false;
-    }
+    else if (productFilter === "toBuy") return !item.comprato;
+    else if (productFilter === "alreadyBought") return item.comprato;
   });
 
-  //console.log(filteredItems);
-
   return (
-    <div className="item-list">      
+    <div className="item-list">
       <div className="filter">
         <select value={productFilter} onChange={(e) => setProductFilter(e.target.value)}>
           <option value="all">Tutti</option>
@@ -100,8 +111,7 @@ function ItemList({prodotti, setProdotti, productFilter, setProductFilter})
   );
 }
 
-function Item({ name, completed, onToggle, onDelete }) 
-{
+function Item({ name, completed, onToggle, onDelete }) {
   return (
     <div className="item">
       <input
@@ -111,24 +121,6 @@ function Item({ name, completed, onToggle, onDelete })
       />
       <span>{name}</span>
       <button onClick={() => onDelete(name)}>X</button>
-    </div>
-  );
-}
-
-function InputItem({inputItemName, setInputItemName, prodotti, setProdotti}) {
-
-  const handleInputChange = (event) => {
-    setInputItemName(event.target.value);
-  };
-
-  const handleAddItem = () => {
-    setProdotti([ ...prodotti , {"nome": inputItemName, "comprato": false} ]);
-  }
-
-  return (
-    <div>
-      <input type="text" value={inputItemName} onChange={handleInputChange} />
-      <button onClick={handleAddItem}>Add Item</button>
     </div>
   );
 }
