@@ -58,7 +58,7 @@ function InputItem({ inputItemName, setInputItemName, prodotti, setProdotti }) {
   }
 
   return (
-    <div>
+    <div className="input-item">
       <input type="text" value={inputItemName} onChange={handleInputChange} />
       <button onClick={handleAddItem}>Add Item</button>
     </div>
