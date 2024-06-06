@@ -51,10 +51,11 @@ function InputItem({ inputItemName, setInputItemName, prodotti, setProdotti }) {
 
   const handleAddItem = () => {
     // impedisci l'aggiunta di item con lo stesso nome o vuoti
-    if (prodotti.map(({ nome }) => nome).includes(inputItemName) || inputItemName === "") {
+    if (prodotti.map(({ nome }) => nome).includes(inputItemName.trim()) || inputItemName.trim() === "") {
       return;
     }
-    setProdotti([...prodotti, { "nome": inputItemName, "comprato": false }]);
+    setProdotti([...prodotti, { "nome": inputItemName.trim(), "comprato": false }]);
+    setInputItemName("");
   }
 
   return (
